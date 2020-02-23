@@ -1,0 +1,537 @@
+/* general styling*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  #showcase{
+    width: 100%;
+  }
+  #about{
+    width: 100%;
+  }
+  #Services{
+    width: 100%;
+  }
+  #tools
+  {
+    width: 100%;
+  }
+    
+}
+
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/*util classes*/
+.container{
+  max-width: 1100px;
+  margin: auto;
+  color:black;
+  
+}
+h1{
+  color: white;
+}
+.text-primary{
+  color: #3693ff;
+}
+
+.text-primaryshow{
+  color: greenyellow;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.bg-light{
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-dark{
+  background: #333;
+  color: #fff;
+}
+
+/* navbar*/
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  padding: 1.5rem 8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 3px solid #3693ff;
+}
+
+#navbar ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar h2 a{
+  color: #fff;
+  text-decoration: none;
+}
+#navbar li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+#navbar li a:hover{
+  background-color: #3693ff;
+}
+
+/* shocase area*/
+#showcase{
+  background: url(E:/Spring2020/UX/assignment1/backimage6.jpg) no-repeat center center/cover;
+  height: 90vh;
+}
+.showcase-content{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.showcase-content h1{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.showcase-content .btn{
+  font-size: 1.5rem;
+  padding: 1rem 10rem;
+  transition: color 0.3s, background 0.3s;
+}
+.showcase-content .btn:hover{
+  background: greenyellow;
+  color:black;
+}
+.btn{
+  color: greenyellow;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border:1px solid greenyellow;
+  font-weight: bold;
+}
+
+/* About Section */
+#about{
+  padding: 5rem 0;
+}
+#about h2, #services h2{
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+#about h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  
+}
+#about .heading{
+  color: #3693ff;
+  font-weight: bold;
+}
+#about p.lead{
+  margin-bottom: 1rem;
+}
+
+#about .about-content{
+  display: flex; 
+ 
+}
+/* personal information */
+#aboud .info-container{
+  flex: 1;
+}
+#about .personal-info{
+  display: block;
+  box-sizing: content-box;
+}
+
+#about .about-text,#about .about-image{
+ flex: 1;
+}
+#about .about-text{
+  text-align: justify;
+  
+}
+#about .about-image img{
+  
+  display: block;
+  margin-left:auto ;
+  width: 40%;
+  border-radius: 40%;
+  margin-top: 10%;
+}
+
+/*Services Section*/
+
+
+/* what i have done : skewed */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+.service-heading{
+  margin: 0;
+  text-align: center;
+}
+
+
+.container-skew{
+  margin: 50;
+  position: relative;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+  grid-template-rows: auto;
+  grid-gap:0 40px
+}
+.container-skew .box-skew{
+  position: relative;
+  height: 400px;
+  background: #060f21;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #000;
+}
+.container-skew .box-skew::before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  transform: skew(2deg,2deg);
+  z-index: -1;
+}
+.container-skew .box-skew:nth-child(1)::before{
+  background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container-skew .box-skew:nth-child(2)::before{
+  background: linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.container-skew .box-skew:nth-child(3)::before{
+  background: linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.container-skew .box-skew:nth-child(4)::before{
+  background: linear-gradient(315deg,#ff0000,#ffc107);
+}
+.container-skew .box-skew::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+.content-skew{
+  position: relative;
+  padding: 20px;
+  transform: translateY(40px);
+}
+
+
+.content-skew h2{
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: rgba(255,255,255,0.1);
+  transition: 0.5s;
+}
+
+.box-skew:hover .content-skew h2{
+  top: -100px;
+}
+.box-skew .content-skew h3{
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+}
+.box-skew .content-skew p{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+}
+.box-skew .content-skew a{
+  position: relative;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  transition: 0.5s;
+  transform: translateY(-40px);
+  opacity: 0;
+  visibility: hidden;
+}
+.box-skew:hover .content-skew a{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.box-skew .content-skew a:hover{
+  color: #000;
+  background: #fff;
+}
+
+
+/* Circle Percentage Section */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import "compass/css3";
+
+.circle-heading{
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+.box-skew{
+  display: flex;
+  position: relative;
+}
+.circle-only{
+  margin: 50;
+  display: flex;
+  position: relative;
+  
+}
+
+.circle-container{
+  position: relative;
+  
+  width: 1200px;
+  
+  display: flex;
+  justify-content: space-around;
+}
+.circle-container .circle-card{
+  position: relative;
+  width: 250px;
+  background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.circle-container .circle-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 150pc 35px rgba(0,0,0,0.5);
+}
+.circle-container .circle-card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255, .03);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.circle-percent{
+  position: relative;
+  
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+.circle-percent .circle-number{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.circle-percent .circle-number h2{
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+.circle-card:hover .circle-percent .circle-number h2{
+  color: #fff;
+  font-size: 60px;
+}
+.circle-percent .circle-number h2 span{
+  font-size: 24px;
+  color: #777;
+  transition: 0.5s;
+}
+.circle-card:hover .circle-percent .circle-number h2 span{
+  color: #fff;
+}
+.circle-text{
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.circle-card:hover .circle-text{
+  color: #fff;
+}
+
+svg{
+  display: flex;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+svg circle{
+  display: flex;
+ 
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+svg circle:nth-child(2){
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+.circle-card:nth-child(1) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 90) / 100) ;
+  stroke: greenyellow;
+}
+.circle-card:nth-child(2) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 85) / 100) ;
+  stroke: gold;
+}
+.circle-card:nth-child(3) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 70) / 100) ;
+  stroke: #ff04f7;
+}
+.circle-card:nth-child(4) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 60) / 100) ;
+  stroke: red;
+}
+
+/* Contact Section */
+#contact{
+  padding: 5rem 0;
+}
+#contact h2{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 8rem;
+}
+#contact h3{
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 3rem 0;
+  margin-top: 5rem;
+}
+#contact .form-box{
+  background: #fff;
+  padding: 3rem;
+  box-shadow: 2px 2p 5px #d1d1d1;
+  border-radius: 10px;
+}
+#contact .form-group{
+  margin-bottom: 2rem;
+}
+#contact .form-group label{
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 1.1rem;
+}
+#contact .form-group input,
+#contact .form-group textarea{
+  width: 80%;
+  margin-left: 10%;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border: 0.5px solid #333;
+  border-radius: 5px;
+}
+#contact .form-group textarea{
+  font-family: Arial, sans-serif;
+}
+#contact .contact-btn{
+  width: 80%;
+  margin-left: 10%;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  background: #3693ff;
+  color: #fff;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+#contact .contact-btn:hover{
+  background: #0378ff;
+}
+#contact .form-container{
+  position: relative;
+}
+#contact .mail-icon{
+  font-size: 4rem;
+  background: #3693ff;
+  color: #fff;
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -7%;
+  left: 45%;
+}
+
+/* Footer section */
+footer{
+  padding: 2.5rem;
+}
+footer p{
+  text-align: center;
+}
+
+
